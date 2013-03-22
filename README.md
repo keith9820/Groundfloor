@@ -1,5 +1,6 @@
-# Groundfloor (Alpha)
+# [Groundfloor][proj] (Alpha)
 ***
+[proj]: http://keith9820.github.com/Groundfloor
 
 .NET library providing helpful features
 
