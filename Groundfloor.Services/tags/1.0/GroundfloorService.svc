@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Groundfloor.Services.GroundfloorService" CodeBehind="GroundfloorService.svc.cs" %>
