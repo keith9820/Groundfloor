@@ -1,0 +1,68 @@
+﻿<div class="container">
+    <div class="hero-unit">
+        <h1>
+            Site Config</h1>
+        <div>
+            <a id="resetApp" class="btn btn-warning" href=""><i class="icon-warning-sign icon-white">
+            </i> Recycle Application</a>
+        </div>
+    </div>
+    <div class="alert alert-error span4">
+        <table>
+            <tr>
+                <td style="text-align: right; padding-right: 5px;">
+                    <strong>Deploy:</strong>
+                </td>
+                <td>
+                    RDC
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right; padding-right: 5px;">
+                    <strong>URI:</strong>
+                </td>
+                <td>
+                    209.114.43.139
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right; padding-right: 5px;">
+                    <strong>Path:</strong>
+                </td>
+                <td>
+                    \c$\shared\KraftSingles
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right; padding-right: 5px;">
+                    <strong>U:</strong>
+                </td>
+                <td>
+                    KraftAD\Administrator
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right; padding-right: 5px;">
+                    <strong>P:</strong>
+                </td>
+                <td>
+                    <abbr id="password" title="kraftsinglesEOV2j4f4r">
+                        *******</abbr>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    function resetApp() {
+
+        if (!confirm('Are you sure you want to do this?')) {
+            return false;
+        }
+    }
+
+    $('#resetApp').bind('click', function (event) {
+        resetApp();
+        return false;
+    });
+</script>

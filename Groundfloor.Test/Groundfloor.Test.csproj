@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC4D9E75-67CD-4895-9FA4-17F1D698AE34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Groundfloor.Test</RootNamespace>
+    <AssemblyName>Groundfloor.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
+    <OutputPath>bin\QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Integration|AnyCPU'">
+    <OutputPath>bin\Integration\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Pluck.SiteLife.SDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extension Method Tests\BoolExtensionMethodsTest.cs" />
+    <Compile Include="Extension Method Tests\DateExtensionMethodsTest.cs" />
+    <Compile Include="Extension Method Tests\DateTimeExtensionsTest.cs" />
+    <Compile Include="Extension Method Tests\DecimalExtensionMethodsTest.cs" />
+    <Compile Include="Extension Method Tests\DictionaryExtensionMethodsTest.cs" />
+    <Compile Include="GoogleDocTest.cs" />
+    <Compile Include="HashTest.cs" />
+    <Compile Include="Extension Method Tests\Int32ExtensionMethodsTest.cs" />
+    <Compile Include="Extension Method Tests\ObjectExtensionMethodsTest.cs" />
+    <Compile Include="Extension Method Tests\OtherExtensionsTest.cs" />
+    <Compile Include="ParseExceptionTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShortGuidTest.cs" />
+    <Compile Include="Extension Method Tests\StringExtensionsTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\Groundfloor.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Groundfloor.Core\trunk\Groundfloor.csproj">
+      <Project>{cf799f68-5ba9-4d25-857d-67a9902ddbff}</Project>
+      <Name>Groundfloor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Groundfloor.Facebook\Groundfloor.Facebook.csproj">
+      <Project>{8c6b0050-943e-4ee6-b345-6eccf07436aa}</Project>
+      <Name>Groundfloor.Facebook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Groundfloor.Google\Groundfloor.Google.csproj">
+      <Project>{9934345B-0395-454A-9AE9-AE334C6917BE}</Project>
+      <Name>Groundfloor.Google</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Groundfloor.Pluck\Groundfloor.Pluck.csproj">
+      <Project>{8a6033ab-1d5c-4ed8-bedf-048e3c3e1316}</Project>
+      <Name>Groundfloor.Pluck</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Groundfloor.Services\trunk\Groundfloor.Services.csproj">
+      <Project>{65d37e4a-79e0-4075-99db-adb85eedd4aa}</Project>
+      <Name>Groundfloor.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

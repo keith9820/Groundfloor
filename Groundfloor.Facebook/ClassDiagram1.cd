@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Groundfloor.Facebook.FacebookInstance">
+    <Position X="1.25" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BCACAAABkAABQAEEEAAEAAAAAIAggAgAAAAAAAQAAQg=</HashCode>
+      <FileName>Facebook\FacebookInstance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groundfloor.Facebook.Page">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Facebook\Page.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groundfloor.Facebook.User">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAACQAAAAAAAAgA=</HashCode>
+      <FileName>Facebook\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

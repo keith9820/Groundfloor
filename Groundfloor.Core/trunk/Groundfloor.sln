@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Groundfloor", "Groundfloor.csproj", "{CF799F68-5BA9-4D25-857D-67A9902DDBFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Integration|Any CPU = Integration|Any CPU
+		QA|Any CPU = QA|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF799F68-5BA9-4D25-857D-67A9902DDBFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF799F68-5BA9-4D25-857D-67A9902DDBFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF799F68-5BA9-4D25-857D-67A9902DDBFF}.Integration|Any CPU.ActiveCfg = Integration|Any CPU
+		{CF799F68-5BA9-4D25-857D-67A9902DDBFF}.Integration|Any CPU.Build.0 = Integration|Any CPU
+		{CF799F68-5BA9-4D25-857D-67A9902DDBFF}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{CF799F68-5BA9-4D25-857D-67A9902DDBFF}.QA|Any CPU.Build.0 = QA|Any CPU
+		{CF799F68-5BA9-4D25-857D-67A9902DDBFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF799F68-5BA9-4D25-857D-67A9902DDBFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

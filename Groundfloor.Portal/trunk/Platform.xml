@@ -1,0 +1,83 @@
+﻿<?xml version="1.0"?>
+<platform>
+  <project>
+    <details>
+      <add name="name" value = "" />
+      <add name="url" value = "" />
+      <add name="icon" value = "" />
+      <add name="client" value = "" />
+      <add name="sowcode" value = "" />
+      <add name="description" value = "" />
+      <add name="launchdate" value = "" />
+      <add name="version" value = "" />
+    </details>
+    
+    <repo type="svn" url="http://svn.360i.com/svn/">
+      <add name="tag" value = "" />
+      <add name="branch" value = "" />
+      <add name="username" value = "" />
+      <add name="password" value = "" />
+    </repo>
+
+    <deployments>
+      <deploy name="stage" method="rdc, ftp, svn">
+        <add name="uri" value = "" />
+        <add name="path" value = "" />
+        <add name="username" value = "" />
+        <add name="password" value = "" />
+        <add name="notes" value = "" />
+      </deploy>
+      <deploy name="prod" method="svn">
+        <add name="uri" value = "" />
+        <add name="path" value = "" />
+        <add name="username" value = "" />
+        <add name="password" value = "" />
+        <add name="notes" value = "" />
+      </deploy>
+    </deployments>
+  </project>
+
+  <services type="webapplication1, webapplication1.platformservices">
+    <authentication mode="None" />
+    <platform allow="*">
+      <add name="recycle" allow="administrator" />
+      <add name="logs" allow="administrator, developers" />
+      <add name="insight" allow="account" />
+      <add name="stats" allow="*" />
+    </platform>
+    
+    <application>
+      <home allow="administrators">
+        <add name="stats" type="hero">
+          <title>SISTE STATS</title>
+          <values>
+            <value class="badge badge-success" label="success">100</value>
+            <value class="badge badge-warning" label="Rejected">50</value>
+            <value class="badge badge-important" label="Waiting">20</value>
+            <value class="badge badge-info" label="Total">170</value>
+          </values>
+        </add>
+        
+        <add name="links" type="links">
+        <title>Related Links</title>
+        <values>
+          <value class="icon-eye-open" label="Content Moderation Tool" value="http://pluck.com" username="x" password="">
+            lorem ipsum
+          </value>
+          <value class="icon-bookmark" label="Kraft" value="http://kraft.com" target="blank">
+            lorem ipsum
+          </value>
+        </values>
+      </add>
+      </home>
+
+      <insight allow="account">
+        
+      </insight>
+      
+      <admin>
+        
+      </admin>
+    </application>
+  </services>
+</platform>
