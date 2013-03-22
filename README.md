@@ -19,7 +19,7 @@ It consists of:
 	Contains helpful extension methods, security features, and HTTP handlers
 	
 #### Groundfloor.Facebook
-	Facebook ingegration
+	Facebook integration
 	
 #### Groundfloor.Google
 	Google documents integration
