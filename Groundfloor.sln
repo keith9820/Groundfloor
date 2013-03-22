@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Groundfloor.Google", "Groun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Groundfloor.Facebook", "Groundfloor.Facebook\Groundfloor.Facebook.csproj", "{8C6B0050-943E-4EE6-B345-6ECCF07436AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaSharp", "..\..\..\Users\Administrator\Projects\InstaSharp\InstaSharp.csproj", "{CD3EA37A-6C9D-4B74-A2A8-1483259FB1B8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
