@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GeoLocationModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="GeoLocationModelStoreContainer">
+          <EntitySet Name="DELUXE_BUSINESS" EntityType="GeoLocationModel.Store.DELUXE_BUSINESS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MULTI_COUNTY" EntityType="GeoLocationModel.Store.MULTI_COUNTY" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USCities" EntityType="GeoLocationModel.Store.USCities" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USCITY" EntityType="GeoLocationModel.Store.USCITY" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="zipcode" EntityType="GeoLocationModel.Store.zipcode" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="DELUXE_BUSINESS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ZipCode" Type="nvarchar" MaxLength="5" />
+          <Property Name="PrimaryRecord" Type="nvarchar" MaxLength="2" />
+          <Property Name="Population" Type="int" />
+          <Property Name="HouseholdsPerZipcode" Type="decimal" Scale="8" />
+          <Property Name="WhitePopulation" Type="int" />
+          <Property Name="BlackPopulation" Type="int" />
+          <Property Name="HispanicPopulation" Type="int" />
+          <Property Name="AsianPopulation" Type="int" />
+          <Property Name="HawaiianPopulation" Type="int" />
+          <Property Name="IndianPopulation" Type="int" />
+          <Property Name="OtherPopulation" Type="int" />
+          <Property Name="MalePopulation" Type="int" />
+          <Property Name="FemalePopulation" Type="int" />
+          <Property Name="PersonsPerHousehold" Type="decimal" Scale="2" />
+          <Property Name="AverageHouseValue" Type="decimal" Scale="8" />
+          <Property Name="IncomePerHousehold" Type="decimal" Scale="8" />
+          <Property Name="MedianAge" Type="decimal" Precision="3" Scale="1" />
+          <Property Name="MedianAgeMale" Type="decimal" Precision="3" Scale="1" />
+          <Property Name="MedianAgeFemale" Type="decimal" Precision="3" Scale="1" />
+          <Property Name="Latitude" Type="decimal" Scale="6" />
+          <Property Name="Longitude" Type="decimal" Scale="6" />
+          <Property Name="Elevation" Type="int" />
+          <Property Name="State" Type="nvarchar" MaxLength="2" />
+          <Property Name="StateFullName" Type="nvarchar" MaxLength="35" />
+          <Property Name="CityType" Type="nvarchar" MaxLength="1" />
+          <Property Name="CityAliasAbbreviation" Type="nvarchar" MaxLength="13" />
+          <Property Name="AreaCode" Type="nvarchar" MaxLength="55" />
+          <Property Name="City" Type="nvarchar" MaxLength="35" />
+          <Property Name="CityAliasName" Type="nvarchar" MaxLength="35" />
+          <Property Name="CountyName" Type="nvarchar" MaxLength="45" />
+          <Property Name="CountyFIPS" Type="nvarchar" MaxLength="5" />
+          <Property Name="StateFIPS" Type="nvarchar" MaxLength="2" />
+          <Property Name="TimeZone" Type="nvarchar" MaxLength="2" />
+          <Property Name="DayLightSaving" Type="nvarchar" MaxLength="1" />
+          <Property Name="MSA" Type="nvarchar" MaxLength="50" />
+          <Property Name="PMSA" Type="nvarchar" MaxLength="50" />
+          <Property Name="CSA" Type="nvarchar" MaxLength="50" />
+          <Property Name="CBSA" Type="nvarchar" MaxLength="50" />
+          <Property Name="CBSA_DIV" Type="nvarchar" MaxLength="255" />
+          <Property Name="CBSA_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="CBSA_Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="MSA_Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="PMSA_Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="Region" Type="nvarchar" MaxLength="10" />
+          <Property Name="Division" Type="nvarchar" MaxLength="20" />
+          <Property Name="MailingName" Type="nvarchar" MaxLength="1" />
+          <Property Name="Establishments2003" Type="int" />
+          <Property Name="Employment2003" Type="int" />
+          <Property Name="FirstQuarterPayroll2003" Type="int" />
+          <Property Name="AnnualPayroll2003" Type="int" />
+          <Property Name="EmploymentFlag2003" Type="nvarchar" MaxLength="50" />
+          <Property Name="GrowthRank" Type="int" />
+          <Property Name="GrowthHousingUnits2003" Type="int" />
+          <Property Name="GrowthHousingUnits2004" Type="int" />
+          <Property Name="GrowthIncreaseNumber" Type="int" />
+          <Property Name="GrowthIncreasePercentage" Type="decimal" Scale="2" />
+          <Property Name="CBSAPop2003" Type="int" />
+          <Property Name="CBSADivPop2003" Type="int" />
+          <Property Name="110thCongressionalDistrict" Type="nvarchar" MaxLength="50" />
+          <Property Name="110thCongressionalLandArea" Type="nvarchar" MaxLength="255" />
+          <Property Name="DeliveryResidential" Type="int" />
+          <Property Name="DeliveryBusiness" Type="int" />
+          <Property Name="DeliveryTotal" Type="int" />
+          <Property Name="PreferredLastLineKey" Type="nvarchar" MaxLength="25" />
+          <Property Name="ClassificationCode" Type="nvarchar" MaxLength="2" />
+          <Property Name="MultiCounty" Type="nvarchar" MaxLength="1" />
+          <Property Name="CSAName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CBSA_Div_Name" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="MULTI_COUNTY">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ZipCode" Type="nvarchar" MaxLength="5" />
+          <Property Name="StateFIPS" Type="nvarchar" MaxLength="2" />
+          <Property Name="State" Type="nvarchar" MaxLength="2" />
+          <Property Name="CountyFIPS" Type="nvarchar" MaxLength="3" />
+          <Property Name="County" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="USCities">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Country" Type="nvarchar" MaxLength="150" />
+          <Property Name="City" Type="nvarchar" MaxLength="250" />
+          <Property Name="AccentCity" Type="nvarchar" MaxLength="250" />
+          <Property Name="Region" Type="nvarchar" MaxLength="50" />
+          <Property Name="Population" Type="nvarchar" MaxLength="50" />
+          <Property Name="Latitude" Type="decimal" Scale="9" />
+          <Property Name="Longitude" Type="decimal" Scale="9" />
+        </EntityType>
+        <EntityType Name="USCITY">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="City" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="State" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Zipcode" Type="int" Nullable="false" />
+          <Property Name="Areacode" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="Lat" Type="float" Nullable="false" />
+          <Property Name="Lon" Type="float" Nullable="false" />
+          <Property Name="County" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Timezone" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="DST" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="DMA" Type="int" Nullable="false" />
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="Continental" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="Country" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="LATD" Type="float" Nullable="false" />
+          <Property Name="LOND" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="zipcode">
+          <Key>
+            <PropertyRef Name="zipcode" />
+          </Key>
+          <Property Name="zipcode" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="state" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="city" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="lat" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="lon" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GeoLocationModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GeoLocationEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="DELUXE_BUSINESS" EntityType="GeoLocationModel.DELUXE_BUSINESS" />
+          <EntitySet Name="MULTI_COUNTY" EntityType="GeoLocationModel.MULTI_COUNTY" />
+          <EntitySet Name="USCities" EntityType="GeoLocationModel.USCities" />
+          <EntitySet Name="USCity" EntityType="GeoLocationModel.USCity" />
+          <EntitySet Name="zipcodes" EntityType="GeoLocationModel.zipcode" />
+        </EntityContainer>
+        <EntityType Name="DELUXE_BUSINESS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ZipCode" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="PrimaryRecord" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="Population" Type="Int32" />
+          <Property Name="HouseholdsPerZipcode" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="WhitePopulation" Type="Int32" />
+          <Property Name="BlackPopulation" Type="Int32" />
+          <Property Name="HispanicPopulation" Type="Int32" />
+          <Property Name="AsianPopulation" Type="Int32" />
+          <Property Name="HawaiianPopulation" Type="Int32" />
+          <Property Name="IndianPopulation" Type="Int32" />
+          <Property Name="OtherPopulation" Type="Int32" />
+          <Property Name="MalePopulation" Type="Int32" />
+          <Property Name="FemalePopulation" Type="Int32" />
+          <Property Name="PersonsPerHousehold" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="AverageHouseValue" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="IncomePerHousehold" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="MedianAge" Type="Decimal" Precision="3" Scale="1" />
+          <Property Name="MedianAgeMale" Type="Decimal" Precision="3" Scale="1" />
+          <Property Name="MedianAgeFemale" Type="Decimal" Precision="3" Scale="1" />
+          <Property Name="Latitude" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Longitude" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Elevation" Type="Int32" />
+          <Property Name="State" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="StateFullName" Type="String" MaxLength="35" Unicode="true" FixedLength="false" />
+          <Property Name="CityType" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="CityAliasAbbreviation" Type="String" MaxLength="13" Unicode="true" FixedLength="false" />
+          <Property Name="AreaCode" Type="String" MaxLength="55" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="35" Unicode="true" FixedLength="false" />
+          <Property Name="CityAliasName" Type="String" MaxLength="35" Unicode="true" FixedLength="false" />
+          <Property Name="CountyName" Type="String" MaxLength="45" Unicode="true" FixedLength="false" />
+          <Property Name="CountyFIPS" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="StateFIPS" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="TimeZone" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="DayLightSaving" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="MSA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PMSA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CSA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CBSA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CBSA_DIV" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CBSA_Type" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CBSA_Name" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="MSA_Name" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="PMSA_Name" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Region" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Division" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="MailingName" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="Establishments2003" Type="Int32" />
+          <Property Name="Employment2003" Type="Int32" />
+          <Property Name="FirstQuarterPayroll2003" Type="Int32" />
+          <Property Name="AnnualPayroll2003" Type="Int32" />
+          <Property Name="EmploymentFlag2003" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GrowthRank" Type="Int32" />
+          <Property Name="GrowthHousingUnits2003" Type="Int32" />
+          <Property Name="GrowthHousingUnits2004" Type="Int32" />
+          <Property Name="GrowthIncreaseNumber" Type="Int32" />
+          <Property Name="GrowthIncreasePercentage" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CBSAPop2003" Type="Int32" />
+          <Property Name="CBSADivPop2003" Type="Int32" />
+          <Property Name="C110thCongressionalDistrict" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="C110thCongressionalLandArea" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="DeliveryResidential" Type="Int32" />
+          <Property Name="DeliveryBusiness" Type="Int32" />
+          <Property Name="DeliveryTotal" Type="Int32" />
+          <Property Name="PreferredLastLineKey" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="ClassificationCode" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="MultiCounty" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="CSAName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CBSA_Div_Name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MULTI_COUNTY">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ZipCode" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="StateFIPS" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="CountyFIPS" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="County" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="USCities">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Country" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="AccentCity" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="Region" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Population" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Latitude" Type="Decimal" Precision="18" Scale="9" />
+          <Property Name="Longitude" Type="Decimal" Precision="18" Scale="9" />
+        </EntityType>
+        <EntityType Name="USCity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Zipcode" Type="Int32" Nullable="false" />
+          <Property Name="Areacode" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="Lat" Type="Double" Nullable="false" />
+          <Property Name="Lon" Type="Double" Nullable="false" />
+          <Property Name="County" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Timezone" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="DST" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="DMA" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="Continental" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="LATD" Type="Double" Nullable="false" />
+          <Property Name="LOND" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="zipcode">
+          <Key>
+            <PropertyRef Name="zipcode1" />
+          </Key>
+          <Property Name="zipcode1" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="state" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="city" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="lat" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="lon" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GeoLocationModelStoreContainer" CdmEntityContainer="GeoLocationEntities">
+          <EntitySetMapping Name="DELUXE_BUSINESS">
+            <EntityTypeMapping TypeName="GeoLocationModel.DELUXE_BUSINESS">
+              <MappingFragment StoreEntitySet="DELUXE_BUSINESS">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="PrimaryRecord" ColumnName="PrimaryRecord" />
+                <ScalarProperty Name="Population" ColumnName="Population" />
+                <ScalarProperty Name="HouseholdsPerZipcode" ColumnName="HouseholdsPerZipcode" />
+                <ScalarProperty Name="WhitePopulation" ColumnName="WhitePopulation" />
+                <ScalarProperty Name="BlackPopulation" ColumnName="BlackPopulation" />
+                <ScalarProperty Name="HispanicPopulation" ColumnName="HispanicPopulation" />
+                <ScalarProperty Name="AsianPopulation" ColumnName="AsianPopulation" />
+                <ScalarProperty Name="HawaiianPopulation" ColumnName="HawaiianPopulation" />
+                <ScalarProperty Name="IndianPopulation" ColumnName="IndianPopulation" />
+                <ScalarProperty Name="OtherPopulation" ColumnName="OtherPopulation" />
+                <ScalarProperty Name="MalePopulation" ColumnName="MalePopulation" />
+                <ScalarProperty Name="FemalePopulation" ColumnName="FemalePopulation" />
+                <ScalarProperty Name="PersonsPerHousehold" ColumnName="PersonsPerHousehold" />
+                <ScalarProperty Name="AverageHouseValue" ColumnName="AverageHouseValue" />
+                <ScalarProperty Name="IncomePerHousehold" ColumnName="IncomePerHousehold" />
+                <ScalarProperty Name="MedianAge" ColumnName="MedianAge" />
+                <ScalarProperty Name="MedianAgeMale" ColumnName="MedianAgeMale" />
+                <ScalarProperty Name="MedianAgeFemale" ColumnName="MedianAgeFemale" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Elevation" ColumnName="Elevation" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="StateFullName" ColumnName="StateFullName" />
+                <ScalarProperty Name="CityType" ColumnName="CityType" />
+                <ScalarProperty Name="CityAliasAbbreviation" ColumnName="CityAliasAbbreviation" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="CityAliasName" ColumnName="CityAliasName" />
+                <ScalarProperty Name="CountyName" ColumnName="CountyName" />
+                <ScalarProperty Name="CountyFIPS" ColumnName="CountyFIPS" />
+                <ScalarProperty Name="StateFIPS" ColumnName="StateFIPS" />
+                <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+                <ScalarProperty Name="DayLightSaving" ColumnName="DayLightSaving" />
+                <ScalarProperty Name="MSA" ColumnName="MSA" />
+                <ScalarProperty Name="PMSA" ColumnName="PMSA" />
+                <ScalarProperty Name="CSA" ColumnName="CSA" />
+                <ScalarProperty Name="CBSA" ColumnName="CBSA" />
+                <ScalarProperty Name="CBSA_DIV" ColumnName="CBSA_DIV" />
+                <ScalarProperty Name="CBSA_Type" ColumnName="CBSA_Type" />
+                <ScalarProperty Name="CBSA_Name" ColumnName="CBSA_Name" />
+                <ScalarProperty Name="MSA_Name" ColumnName="MSA_Name" />
+                <ScalarProperty Name="PMSA_Name" ColumnName="PMSA_Name" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="MailingName" ColumnName="MailingName" />
+                <ScalarProperty Name="Establishments2003" ColumnName="Establishments2003" />
+                <ScalarProperty Name="Employment2003" ColumnName="Employment2003" />
+                <ScalarProperty Name="FirstQuarterPayroll2003" ColumnName="FirstQuarterPayroll2003" />
+                <ScalarProperty Name="AnnualPayroll2003" ColumnName="AnnualPayroll2003" />
+                <ScalarProperty Name="EmploymentFlag2003" ColumnName="EmploymentFlag2003" />
+                <ScalarProperty Name="GrowthRank" ColumnName="GrowthRank" />
+                <ScalarProperty Name="GrowthHousingUnits2003" ColumnName="GrowthHousingUnits2003" />
+                <ScalarProperty Name="GrowthHousingUnits2004" ColumnName="GrowthHousingUnits2004" />
+                <ScalarProperty Name="GrowthIncreaseNumber" ColumnName="GrowthIncreaseNumber" />
+                <ScalarProperty Name="GrowthIncreasePercentage" ColumnName="GrowthIncreasePercentage" />
+                <ScalarProperty Name="CBSAPop2003" ColumnName="CBSAPop2003" />
+                <ScalarProperty Name="CBSADivPop2003" ColumnName="CBSADivPop2003" />
+                <ScalarProperty Name="C110thCongressionalDistrict" ColumnName="110thCongressionalDistrict" />
+                <ScalarProperty Name="C110thCongressionalLandArea" ColumnName="110thCongressionalLandArea" />
+                <ScalarProperty Name="DeliveryResidential" ColumnName="DeliveryResidential" />
+                <ScalarProperty Name="DeliveryBusiness" ColumnName="DeliveryBusiness" />
+                <ScalarProperty Name="DeliveryTotal" ColumnName="DeliveryTotal" />
+                <ScalarProperty Name="PreferredLastLineKey" ColumnName="PreferredLastLineKey" />
+                <ScalarProperty Name="ClassificationCode" ColumnName="ClassificationCode" />
+                <ScalarProperty Name="MultiCounty" ColumnName="MultiCounty" />
+                <ScalarProperty Name="CSAName" ColumnName="CSAName" />
+                <ScalarProperty Name="CBSA_Div_Name" ColumnName="CBSA_Div_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MULTI_COUNTY">
+            <EntityTypeMapping TypeName="GeoLocationModel.MULTI_COUNTY">
+              <MappingFragment StoreEntitySet="MULTI_COUNTY">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="StateFIPS" ColumnName="StateFIPS" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CountyFIPS" ColumnName="CountyFIPS" />
+                <ScalarProperty Name="County" ColumnName="County" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USCities">
+            <EntityTypeMapping TypeName="GeoLocationModel.USCities">
+              <MappingFragment StoreEntitySet="USCities">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="AccentCity" ColumnName="AccentCity" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Population" ColumnName="Population" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USCity">
+            <EntityTypeMapping TypeName="GeoLocationModel.USCity">
+              <MappingFragment StoreEntitySet="USCITY">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Zipcode" ColumnName="Zipcode" />
+                <ScalarProperty Name="Areacode" ColumnName="Areacode" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Lon" ColumnName="Lon" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="Timezone" ColumnName="Timezone" />
+                <ScalarProperty Name="DST" ColumnName="DST" />
+                <ScalarProperty Name="DMA" ColumnName="DMA" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Continental" ColumnName="Continental" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="LATD" ColumnName="LATD" />
+                <ScalarProperty Name="LOND" ColumnName="LOND" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zipcodes">
+            <EntityTypeMapping TypeName="GeoLocationModel.zipcode">
+              <MappingFragment StoreEntitySet="zipcode">
+                <ScalarProperty Name="zipcode1" ColumnName="zipcode" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="lon" ColumnName="lon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
